@@ -11,8 +11,6 @@ def generate_profile(age):
 
 
 def main():
-    print("Welcome! Let's create your profile.\n")
-
     # Get basic information
     user_name = input("Enter your full name: ")
     birth_year_str = input("Enter your birth year: ")
@@ -24,8 +22,6 @@ def main():
 
     # Collect hobbies
     hobbies = []
-    print("\nNow let's collect your hobbies!")
-    print("Enter one hobby at a time. Type 'stop' to finish")
 
     while True:
         hobby = input("Enter a favorite hobby or type 'stop' to finish: ").strip()
@@ -50,16 +46,12 @@ def main():
     }
 
     # Display results
-    print("\n" + "=" * 50)
-    print("YOUR PROFILE")
-    print("=" * 50)
+    print("\n" + "-" * 3)
+    print("Profile Summary:")
     print(f"Name: {user_profile['name']}")
-    print(f"Current age: {user_profile['age']} years")
-    print(f"Birth year: {user_profile['birth_year']}")
+    print(f"Age: {user_profile['age']} years")
     print(f"Life stage: {user_profile['life_stage']}")
 
-    # Handle hobbies display
-    print("\nHOBBIES:")
     if not user_profile['hobbies']:
         print("You didn't mention any hobbies.")
     else:
@@ -67,6 +59,7 @@ def main():
         print(f"Favorite Hobbies ({hobby_count}):")
         for hobby in user_profile['hobbies']:
             print(f"  - {hobby}")
+    print("-" * 3)
 
 # Run the program
 if __name__ == "__main__":
