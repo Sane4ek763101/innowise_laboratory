@@ -1,7 +1,3 @@
--- Deleting existing tables
-DROP TABLE IF EXISTS grades;
-DROP TABLE IF EXISTS students;
-
 -- Creating tables
 CREATE TABLE students (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
