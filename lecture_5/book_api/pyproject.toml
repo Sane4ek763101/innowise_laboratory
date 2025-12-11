@@ -1,0 +1,10 @@
+[project]
+name = "book-api"
+version = "0.1.0"
+description = "Add your description here"
+requires-python = ">=3.11"
+dependencies = [
+    "fastapi>=0.124.2",
+    "sqlalchemy>=2.0.45",
+    "uvicorn>=0.38.0",
+]
